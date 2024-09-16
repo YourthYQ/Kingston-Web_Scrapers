@@ -21,10 +21,10 @@ class ProductHandler:
         options.add_argument('--no-sandbox')  # Bypass OS security model
         options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
         
-        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         # Specify the path to the manually downloaded chromedriver
-        chromedriver_path = '/Users/yourth/.wdm/drivers/chromedriver/mac64/127.0.6533.88/chromedriver-mac-arm64/chromedriver'
-        driver = webdriver.Chrome(service=Service(chromedriver_path), options=options)
+        # chromedriver_path = '/Users/yourth/.wdm/drivers/chromedriver/mac64/127.0.6533.88/chromedriver-mac-arm64/chromedriver'
+        # driver = webdriver.Chrome(service=Service(chromedriver_path), options=options)
         
         for url in list_of_urls:
             driver.get(url)

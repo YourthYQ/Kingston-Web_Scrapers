@@ -12,10 +12,10 @@ class ResponseHandler:
         options = Options()
         options.headless = True  # Run in headless mode
 
-        # driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         # Specify the path to the manually downloaded chromedriver
-        chromedriver_path = '/Users/yourth/.wdm/drivers/chromedriver/mac64/127.0.6533.88/chromedriver-mac-arm64/chromedriver'
-        driver = webdriver.Chrome(service=Service(chromedriver_path), options=options)
+        # chromedriver_path = '/Users/yourth/.wdm/drivers/chromedriver/mac64/127.0.6533.88/chromedriver-mac-arm64/chromedriver'
+        # driver = webdriver.Chrome(service=Service(chromedriver_path), options=options)
         
         driver.get(url)
         return driver
